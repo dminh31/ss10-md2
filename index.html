@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = [
+            {
+                id: 1,
+                name: "Cuong1",
+                age: 18,
+            },
+            {
+                id: 2,
+                name: "Auong2",
+                age: 19,
+            },
+            {
+                id: 3,
+                name: "Duong3",
+                age: 20,
+            },
+            {
+                id: 4,
+                name: "Buong4",
+                age: 21,
+            },
+        ]
+
+        let find = array.find((item) => item.name === "Duong3")
+        // k tìm ra => undefined
+        console.log(find);
+
+        let index = array.findIndex((item) => item.name === "Duong3")
+        // nếu k tìm thấy => -1 
+        // nhận phần tử đầu tiên thỏa mãn điều kiện
+        console.log(index);
+
+        let arrSort = array.sort((phantutruoc, phantusau) => phantutruoc.age - phantusau.age)
+        console.log(arrSort);
+
+        let arrSortByAlphabet=array.sort((phantutruoc,phantusau)=>
+        phantutruoc.name.localeCompare(phantusau.name))
+        console.log(arrSortByAlphabet);
+    </script>
+</body>
+
+</html>
